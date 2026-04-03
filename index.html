@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sagar Khanal — Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#hero" class="nav-logo">SK.</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact" class="nav-cta">Contact</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-lines"></div>
+    <div class="hero-content">
+      <div class="hero-tag">Available for opportunities</div>
+      <h1 class="hero-name">Sagar<br/><span>Khanal</span></h1>
+      <p class="hero-subtitle">
+        Aspiring software developer passionate about building clean, purposeful digital solutions. Currently sharpening skills and seeking opportunities to make an impact.
+      </p>
+      <div class="hero-btns">
+        <a href="#projects" class="btn-primary">View My Work</a>
+        <a href="#contact" class="btn-secondary">Get in Touch</a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <div class="stat-num">5+</div>
+          <div class="stat-label">Projects Completed</div>
+        </div>
+        <div>
+          <div class="stat-num">3+</div>
+          <div class="stat-label">Technologies</div>
+        </div>
+        <div>
+          <div class="stat-num">2025</div>
+          <div class="stat-label">Graduating Year</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section-label reveal">Who I Am</div>
+    <h2 class="section-title reveal">About Me</h2>
+    <div class="section-divider reveal"></div>
+    <div class="about-grid">
+      <div class="about-img-wrap reveal">
+        <div class="about-img-placeholder">👤</div>
+        <div class="about-frame"></div>
+      </div>
+      <div class="about-text reveal">
+        <p>Hi, I'm <strong>Sagar Khanal</strong> — a motivated and detail-oriented computer science student from Nepal. I'm passionate about transforming ideas into functional, elegant software solutions.</p>
+        <p>I thrive on learning new technologies and enjoy working on projects that challenge me to think creatively and technically. Whether it's building web apps, solving algorithmic problems, or exploring new frameworks, I bring dedication and curiosity to everything I do.</p>
+        <p>I'm actively looking for <strong>internship and entry-level opportunities</strong> where I can contribute meaningfully, grow professionally, and collaborate with talented teams.</p>
+        <div class="about-details">
+          <div class="detail-item">
+            <div class="label">Location</div>
+            <div class="value">Nepal 🇳🇵</div>
+          </div>
+          <div class="detail-item">
+            <div class="label">Website</div>
+            <div class="value">sagar-khanal.com.np</div>
+          </div>
+          <div class="detail-item">
+            <div class="label">Status</div>
+            <div class="value">Open to Work ✅</div>
+          </div>
+          <div class="detail-item">
+            <div class="label">Degree</div>
+            <div class="value">B.Sc. Computer Science</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="light-section">
+    <div class="section-label reveal" style="color:var(--gold)">What I Know</div>
+    <h2 class="section-title reveal">Skills & Technologies</h2>
+    <div class="section-divider reveal"></div>
+    <div class="skills-grid">
+      <div class="skill-card reveal" style="background:var(--navy); border-color:var(--border)">
+        <div class="skill-icon">🌐</div>
+        <h3>Frontend Development</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">HTML5</span>
+          <span class="skill-tag">CSS3</span>
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">React</span>
+          <span class="skill-tag">Tailwind CSS</span>
+        </div>
+      </div>
+      <div class="skill-card reveal" style="background:var(--navy); border-color:var(--border)">
+        <div class="skill-icon">⚙️</div>
+        <h3>Backend Development</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">Node.js</span>
+          <span class="skill-tag">Express.js</span>
+          <span class="skill-tag">REST APIs</span>
+        </div>
+      </div>
+      <div class="skill-card reveal" style="background:var(--navy); border-color:var(--border)">
+        <div class="skill-icon">🗄️</div>
+        <h3>Database & Tools</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">MySQL</span>
+          <span class="skill-tag">MongoDB</span>
+          <span class="skill-tag">Git & GitHub</span>
+          <span class="skill-tag">VS Code</span>
+        </div>
+      </div>
+      <div class="skill-card reveal" style="background:var(--navy); border-color:var(--border)">
+        <div class="skill-icon">🧠</div>
+        <h3>Core CS Concepts</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">Data Structures</span>
+          <span class="skill-tag">Algorithms</span>
+          <span class="skill-tag">OOP</span>
+          <span class="skill-tag">Problem Solving</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="section-label reveal">What I've Built</div>
+    <h2 class="section-title reveal">Projects</h2>
+    <div class="section-divider reveal"></div>
+    <div class="projects-grid">
+
+      <div class="project-card reveal">
+        <div class="project-thumb p1">🛒</div>
+        <div class="project-body">
+          <h3>E-Commerce Web App</h3>
+          <p>A fully functional e-commerce platform with product listings, cart management, and user authentication.</p>
+          <div class="project-stack">
+            <span class="stack-tag">React</span>
+            <span class="stack-tag">Node.js</span>
+            <span class="stack-tag">MongoDB</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="proj-link">↗ Live Demo</a>
+            <a href="#" class="proj-link">⌥ GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-thumb p2">📋</div>
+        <div class="project-body">
+          <h3>Task Management System</h3>
+          <p>A productivity app with drag-and-drop task boards, priority labels, and deadline tracking features.</p>
+          <div class="project-stack">
+            <span class="stack-tag">JavaScript</span>
+            <span class="stack-tag">HTML/CSS</span>
+            <span class="stack-tag">LocalStorage</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="proj-link">↗ Live Demo</a>
+            <a href="#" class="proj-link">⌥ GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-thumb p3">🔐</div>
+        <div class="project-body">
+          <h3>Student Portal</h3>
+          <p>A web-based student information portal with login, grade tracking, and schedule management modules.</p>
+          <div class="project-stack">
+            <span class="stack-tag">Python</span>
+            <span class="stack-tag">Flask</span>
+            <span class="stack-tag">MySQL</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="proj-link">↗ Live Demo</a>
+            <a href="#" class="proj-link">⌥ GitHub</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="light-section">
+    <div class="section-label reveal" style="color:var(--gold)">My Journey</div>
+    <h2 class="section-title reveal">Education & Experience</h2>
+    <div class="section-divider reveal"></div>
+    <div class="timeline">
+
+      <div class="timeline-item reveal">
+        <div class="timeline-period">2022 — Present</div>
+        <div class="timeline-role" style="color:var(--navy)">B.Sc. Computer Science</div>
+        <div class="timeline-org">Your University Name — Kathmandu, Nepal</div>
+        <ul class="timeline-desc" style="color:#5a6a7a">
+          <li>Maintaining a strong academic record with focus on software engineering and algorithms.</li>
+          <li>Active member of the college coding club, participating in hackathons and tech events.</li>
+          <li>Completed coursework in Data Structures, DBMS, Web Technologies, and OOP.</li>
+        </ul>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-period">Summer 2024</div>
+        <div class="timeline-role" style="color:var(--navy)">Web Development Intern</div>
+        <div class="timeline-org">Company / Organization Name — Remote</div>
+        <ul class="timeline-desc" style="color:#5a6a7a">
+          <li>Assisted in building responsive UI components using React and Tailwind CSS.</li>
+          <li>Collaborated with a team to integrate REST APIs and improve front-end performance.</li>
+          <li>Participated in code reviews and adopted agile development practices.</li>
+        </ul>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-period">2019 — 2021</div>
+        <div class="timeline-role" style="color:var(--navy)">+2 Science (HSEB)</div>
+        <div class="timeline-org">Your School Name — Nepal</div>
+        <ul class="timeline-desc" style="color:#5a6a7a">
+          <li>Completed higher secondary education with distinction in science and mathematics.</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="contact-inner">
+      <div class="section-label reveal">Let's Connect</div>
+      <h2 class="section-title reveal">Get in Touch</h2>
+      <div class="section-divider reveal" style="margin:1.2rem auto 0;"></div>
+      <p class="contact-intro reveal">
+        I'm currently open to internships, entry-level roles, and freelance projects. Whether you have an opportunity, a question, or just want to say hello — my inbox is always open.
+      </p>
+      <div class="contact-grid reveal">
+        <a href="mailto:sagar@sagar-khanal.com.np" class="contact-card">
+          <div class="icon">✉️</div>
+          <div class="c-label">Email</div>
+          <div class="c-value">sagar@sagar-khanal.com.np</div>
+        </a>
+        <a href="https://linkedin.com/in/sagarkhanal" target="_blank" class="contact-card">
+          <div class="icon">💼</div>
+          <div class="c-label">LinkedIn</div>
+          <div class="c-value">linkedin.com/in/sagarkhanal</div>
+        </a>
+        <a href="https://github.com/sagarkhanal" target="_blank" class="contact-card">
+          <div class="icon">🐙</div>
+          <div class="c-label">GitHub</div>
+          <div class="c-value">github.com/sagarkhanal</div>
+        </a>
+      </div>
+      <div class="contact-form reveal">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Your Name</label>
+            <input type="text" placeholder="John Doe"/>
+          </div>
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" placeholder="john@example.com"/>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Subject</label>
+          <input type="text" placeholder="Job Opportunity / Collaboration / Hello"/>
+        </div>
+        <div class="form-group">
+          <label>Message</label>
+          <textarea placeholder="Tell me about the opportunity or what you have in mind..."></textarea>
+        </div>
+        <button class="btn-primary" style="width:100%;" onclick="sendMessage()">Send Message →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="foot-brand">Sagar Khanal</div>
+    <p>© 2025 sagar-khanal.com.np · Designed & Built with ♥</p>
+    <div class="social-links">
+      <a href="https://github.com/sagarkhanal" target="_blank" class="social-link" title="GitHub">GH</a>
+      <a href="https://linkedin.com/in/sagarkhanal" target="_blank" class="social-link" title="LinkedIn">in</a>
+      <a href="mailto:sagar@sagar-khanal.com.np" class="social-link" title="Email">✉</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
