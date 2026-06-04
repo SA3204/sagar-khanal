@@ -6,17 +6,17 @@
   <title>Sagar Khanal — Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="style.css"/>
+
+  <!-- ✅ EmailJS SDK -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+    emailjs.init("YOUR_PUBLIC_KEY"); // ✅ Replace with your EmailJS Public Key
+  </script>
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8235461024018890" crossorigin="anonymous"></script>
 </head>
 <body>
- <!-- Google AdSense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8235461024018890"
-     crossorigin="anonymous"></script>
-
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="style.css"/>
-</head>
-<body>
-
 
   <!-- NAV -->
   <nav>
@@ -76,7 +76,7 @@
       </div>
       <div class="about-text reveal">
         <p>Hi, I'm <strong>Sagar Khanal</strong> — a motivated and detail-oriented IT student from Nepal, currently pursuing my Master of Information Technology in Australia.</p>
-        <p>I'm passionate about transforming ideas into functional, elegant software solutions. My academic journey began at Gaurishankar English Boarding School and Manimukunda College in Butwal, Nepal, before I pursued my Bachelor of IT at Federation University, Australia — and now my Master of IT at NAPS Australia.</p>
+        <p>I'm passionate about transforming ideas into functional, elegant software solutions. My academic journey began at Gaurishankar English Boarding School and Manimukunda College in Butwal, Nepal, before I pursued my Bachelor of IT in Australia — and now my Master of IT at NAPS Australia.</p>
         <p>I thrive on learning new technologies and enjoy working on projects that challenge me to think creatively and technically. Whether it's building web apps, solving algorithmic problems, or exploring new frameworks, I bring dedication and curiosity to everything I do. I'm actively looking for <strong>internship and entry-level opportunities</strong> where I can contribute meaningfully, grow professionally, and collaborate with talented teams.</p>
         <div class="about-details">
           <div class="detail-item">
@@ -93,7 +93,7 @@
           </div>
           <div class="detail-item">
             <div class="label">Degree</div>
-            <div class="value">Bachelor of Information Technology FEDERATION UNIVERSITY</div>
+            <div class="value">Master of Information Technology</div>
           </div>
         </div>
       </div>
@@ -211,7 +211,7 @@
     </div>
   </section>
 
-  <!-- EXPERIENCE -->
+  <!-- EDUCATION -->
   <section id="experience" class="light-section">
     <div class="section-label reveal" style="color:var(--gold)">My Journey</div>
     <h2 class="section-title reveal">Education</h2>
@@ -231,8 +231,8 @@
 
       <div class="timeline-item reveal">
         <div class="timeline-period">2022-2025</div>
-        <div class="timeline-role" style="color:var(--navy)">Bachelor of IT </div>
-        <div class="timeline-org">Federation University, Australia</div>
+        <div class="timeline-role" style="color:var(--navy)">Bachelor of IT</div>
+        <div class="timeline-org">Australia</div>
         <ul class="timeline-desc" style="color:#5a6a7a">
           <li>Developed full-stack web applications using HTML, CSS, JavaScript, and PHP as part of academic projects.</li>
           <li>Collaborated with peers using Git and GitHub for version control and team-based software development.</li>
@@ -278,30 +278,34 @@
           <div class="c-value">github.com/SA3204</div>
         </a>
       </div>
+
+      <!-- CONTACT FORM -->
       <div class="contact-form reveal">
         <div class="form-row">
           <div class="form-group">
             <label>Your Name</label>
-            <input type="text" placeholder="John Doe"/>
+            <input type="text" id="from_name" placeholder="John Doe"/>
           </div>
           <div class="form-group">
             <label>Email Address</label>
-            <input type="email" placeholder="john@example.com"/>
+            <input type="email" id="reply_to" placeholder="john@example.com"/>
           </div>
         </div>
         <div class="form-group">
           <label>Subject</label>
-          <input type="text" placeholder="Job Opportunity / Collaboration / Hello"/>
+          <input type="text" id="subject" placeholder="Job Opportunity / Collaboration / Hello"/>
         </div>
         <div class="form-group">
           <label>Message</label>
-          <textarea placeholder="Tell me about the opportunity or what you have in mind..."></textarea>
+          <textarea id="message" placeholder="Tell me about the opportunity or what you have in mind..."></textarea>
         </div>
-        <button class="btn-primary" style="width:100%;" onclick="sendMessage()">Send Message →</button>
+        <button class="btn-primary" id="send-btn" style="width:100%;" onclick="sendMessage()">Send Message →</button>
+        <p id="form-status" style="text-align:center; margin-top:1rem; font-size:0.95rem; font-weight:500;"></p>
       </div>
     </div>
   </section>
-<!-- ✅ AdSense Ad (before footer) -->
+
+  <!-- AdSense -->
   <div style="text-align:center; margin: 3rem 0;">
     <ins class="adsbygoogle"
          style="display:block"
@@ -326,6 +330,53 @@
   </footer>
 
   <script src="script.js"></script>
+
+  <!-- ✅ EmailJS Send Function -->
+  <script>
+    function sendMessage() {
+      const name    = document.getElementById('from_name').value.trim();
+      const email   = document.getElementById('reply_to').value.trim();
+      const subject = document.getElementById('subject').value.trim();
+      const message = document.getElementById('message').value.trim();
+      const status  = document.getElementById('form-status');
+      const btn     = document.getElementById('send-btn');
+
+      if (!name || !email || !subject || !message) {
+        status.style.color = '#e74c3c';
+        status.textContent = '⚠️ Please fill in all fields before sending.';
+        return;
+      }
+
+      btn.disabled = true;
+      btn.textContent = 'Sending...';
+      status.style.color = '#aaa';
+      status.textContent = 'Sending your message...';
+
+      emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', {
+        from_name: name,
+        reply_to:  email,
+        subject:   subject,
+        message:   message,
+      })
+      .then(function () {
+        status.style.color = '#2ecc71';
+        status.textContent = '✅ Message sent! I\'ll get back to you soon.';
+        btn.textContent = 'Send Message →';
+        btn.disabled = false;
+        document.getElementById('from_name').value = '';
+        document.getElementById('reply_to').value  = '';
+        document.getElementById('subject').value   = '';
+        document.getElementById('message').value   = '';
+      })
+      .catch(function (error) {
+        status.style.color = '#e74c3c';
+        status.textContent = '❌ Something went wrong. Please try again or email me directly.';
+        btn.textContent = 'Send Message →';
+        btn.disabled = false;
+        console.error('EmailJS error:', error);
+      });
+    }
+  </script>
+
 </body>
 </html>
-
