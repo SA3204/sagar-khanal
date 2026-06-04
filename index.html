@@ -7,10 +7,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="style.css"/>
 
-  <!-- ✅ EmailJS SDK -->
+  <!-- EmailJS SDK -->
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script>
-    emailjs.init("YOUR_PUBLIC_KEY"); // ✅ Replace with your EmailJS Public Key
+    emailjs.init("EPi6Q_zooBUSBOUa9");
   </script>
 
   <!-- Google AdSense -->
@@ -331,7 +331,7 @@
 
   <script src="script.js"></script>
 
-  <!-- ✅ EmailJS Send Function -->
+  <!-- EmailJS Send Function -->
   <script>
     function sendMessage() {
       const name    = document.getElementById('from_name').value.trim();
@@ -352,7 +352,7 @@
       status.style.color = '#aaa';
       status.textContent = 'Sending your message...';
 
-      emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', {
+      emailjs.send('service_tl0pn1i', 'template_sml221f', {
         from_name: name,
         reply_to:  email,
         subject:   subject,
